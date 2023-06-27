@@ -1,18 +1,18 @@
 #### Pix2pix for image colorization
 ###### Python 3.6 and MXNet 1.1
 
-This is an attempt to implement Pix2pix network using Python and MXNet
-Mainly used to colorize black and white images, specifically videos.
+Это  реализация сети Pix2pix с использованием Python и MXNet
+В основном используется для раскрашивания черно-белых изображений, в частности видео.
 
-The network is configured right now to work with input of 1x3x256x256 images.
-An image will be split into lightness and a,b channels, the lightness channel
-will serve as an input to generator which will attempt to produce a 1x2x256x256 a,b channels tensor
-that we will feed into the discriminator in a sequence with original a,b channels.
+Прямо сейчас сеть настроена на работу с вводом изображений размером 1x3x256x256.
+Изображение будет разделено на каналы яркости и a, b, канал яркости
+будет служить входными данными для генератора, который попытается создать тензор каналов a, b
+размером 1x256, который мы введем в дискриминатор в последовательности с исходными каналами a, b.
 
-#### Metrics visualization
+#### Метрики визуализации
 tensorboard --logdir=./logs/train
 
-##### Code is based on
+##### Код основан на 
 https://github.com/affinelayer/pix2pix-tensorflow
 https://github.com/zackchase/mxnet-the-straight-dope/blob/master/chapter14_generative-adversarial-networks/pixel2pixel.ipynb
 
@@ -20,5 +20,5 @@ https://github.com/zackchase/mxnet-the-straight-dope/blob/master/chapter14_gener
 https://arxiv.org/abs/1611.07004
 
 ####
-Video colorization example:
+Привет колоризации видео:
 ![Video colorization, captured and colorized in real-time using notebook and usb web-cam](https://s3-us-west-1.amazonaws.com/pix2pix/real_time_video_colorization.gif)
